@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore web development, programming and cybersecurity courses on TechVision.">
+  <title>Tech Academy — TechVision</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/academy.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body data-page="academy" data-depth="1">
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="dashboard-sidebar" data-nav>
+      <a class="brand dashboard-brand" href="../index.html">
+        <span class="brand-mark">TV</span><span>TechVision</span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="sidebar-nav" aria-label="Workspace">
+        <a class="sidebar-link" href="dashboard.html"><span class="sidebar-icon">▦</span>Dashboard</a>
+        <a class="sidebar-link" href="academy.html" aria-current="page"><span class="sidebar-icon">▤</span>Tech Academy</a>
+        <a class="sidebar-link" href="progress.html"><span class="sidebar-icon">↗</span>My Progress</a>
+        <a class="sidebar-link" href="resources.html"><span class="sidebar-icon">▧</span>Resources</a>
+      </nav>
+
+      <div class="sidebar-label">DEVELOPMENT</div>
+      <nav class="sidebar-nav" aria-label="Development tools">
+        <a class="sidebar-link" href="code-studio.html"><span class="sidebar-icon">⌨</span>Code Studio</a>
+        <a class="sidebar-link" href="terminal.html"><span class="sidebar-icon">$_</span>Terminal Lab</a>
+        <a class="sidebar-link" href="repositories.html"><span class="sidebar-icon">⑂</span>Repositories</a>
+        <a class="sidebar-link" href="notepad.html"><span class="sidebar-icon">▣</span>My Notes</a>
+      </nav>
+
+      <div class="sidebar-label">SECURITY & ACCOUNT</div>
+      <nav class="sidebar-nav" aria-label="Security and account">
+        <a class="sidebar-link" href="cybersecurity.html"><span class="sidebar-icon">⬡</span>Cybersecurity</a>
+        <a class="sidebar-link" href="assistant.html"><span class="sidebar-icon">✧</span>AI Assistant</a>
+        <a class="sidebar-link" href="profile.html"><span class="sidebar-icon">◉</span>My Profile</a>
+        <a class="sidebar-link" href="settings.html"><span class="sidebar-icon">⚙</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-demo-note">
+          <span class="demo-status-dot"></span>
+          <div><strong>Demo workspace</strong><small>Local prototype mode</small></div>
+        </div>
+        <button class="sidebar-link sidebar-logout" type="button" data-logout>
+          <span class="sidebar-icon">↪</span>Log out
+        </button>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="icon-button dashboard-menu-toggle" type="button"
+            data-nav-toggle aria-label="Toggle sidebar"
+            aria-expanded="false" aria-controls="dashboard-sidebar">☰</button>
+          <div>
+            <div class="topbar-eyebrow">LEARN SOMETHING NEW</div>
+            <div class="topbar-title">Tech Academy</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span class="demo-pill"><span class="demo-status-dot"></span>Demo mode</span>
+          <button class="icon-button" type="button" data-theme-toggle
+            aria-label="Switch theme">☀</button>
+          <a class="topbar-avatar" href="profile.html" data-user-initial aria-label="Your profile">U</a>
+        </div>
+      </header>
+
+      <main class="dashboard-content academy-content">
+        <section class="academy-hero">
+          <span class="eyebrow">TECHVISION LEARNING HUB</span>
+          <h1>Learn skills that <span class="gradient-text">move you forward.</span></h1>
+          <p>Explore beginner-friendly learning paths in development, programming and cybersecurity.</p>
+          <div class="academy-hero-stats">
+            <span><strong data-academy-count>3</strong> learning paths</span>
+            <span><strong>Beginner</strong> friendly</span>
+            <span><strong>Self-paced</strong> demo lessons</span>
+          </div>
+        </section>
+
+        <section class="academy-toolbar" aria-label="Find courses">
+          <div class="academy-search">
+            <label class="visually-hidden" for="course-search">Search courses</label>
+            <span aria-hidden="true">⌕</span>
+            <input id="course-search" type="search" placeholder="Search courses, topics..." autocomplete="off">
+          </div>
+          <div class="academy-filters" role="group" aria-label="Filter by category">
+            <button class="filter-chip is-active" type="button" data-course-filter="all" aria-pressed="true">All courses</button>
+            <button class="filter-chip" type="button" data-course-filter="development" aria-pressed="false">Development</button>
+            <button class="filter-chip" type="button" data-course-filter="programming" aria-pressed="false">Programming</button>
+            <button class="filter-chip" type="button" data-course-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+          </div>
+        </section>
+
+        <section class="dashboard-section" aria-labelledby="catalog-title">
+          <div class="section-title-row">
+            <div>
+              <h2 id="catalog-title">Explore learning paths</h2>
+              <p>Choose a path to view its curriculum and track your demo progress.</p>
+            </div>
+            <span class="badge">Demo catalog</span>
+          </div>
+
+          <div class="academy-grid" data-academy-grid>
+            <article class="academy-card" data-course-card data-course-id="web-development" data-category="development">
+              <div class="academy-card-art academy-art-web">
+                <span class="academy-art-tag">HTML · CSS · JS</span>
+                <span class="academy-art-symbol">&lt;/&gt;</span>
+              </div>
+              <div class="academy-card-body">
+                <div class="academy-card-meta"><span>WEB DEVELOPMENT</span><span class="level-chip">Beginner</span></div>
+                <h3>Web Development Fundamentals</h3>
+                <p>Build a foundation in HTML, CSS, responsive layouts and JavaScript.</p>
+                <div class="academy-card-facts"><span>6 demo lessons</span><span>Self-paced</span></div>
+                <div class="academy-progress"><div class="progress-track"><div class="progress-fill" data-course-bar style="width:0%"></div></div><span data-course-percent>0%</span></div>
+                <a class="button button-primary academy-card-cta" href="course-details.html?course=web-development">View course →</a>
+              </div>
+            </article>
+
+            <article class="academy-card" data-course-card data-course-id="cybersecurity" data-category="cybersecurity">
+              <div class="academy-card-art academy-art-security">
+                <span class="academy-art-tag">NETWORK · LINUX · SAFETY</span>
+                <span class="academy-art-symbol">⬡</span>
+              </div>
+              <div class="academy-card-body">
+                <div class="academy-card-meta"><span>CYBERSECURITY</span><span class="level-chip">Beginner</span></div>
+                <h3>Cybersecurity Essentials</h3>
+                <p>Learn security principles, networking concepts, Linux and safe lab practice.</p>
+                <div class="academy-card-facts"><span>6 demo lessons</span><span>Self-paced</span></div>
+                <div class="academy-progress"><div class="progress-track"><div class="progress-fill" data-course-bar style="width:0%"></div></div><span data-course-percent>0%</span></div>
+                <a class="button button-primary academy-card-cta" href="course-details.html?course=cybersecurity">View course →</a>
+              </div>
+            </article>
+
+            <article class="academy-card" data-course-card data-course-id="programming" data-category="programming">
+              <div class="academy-card-art academy-art-code">
+                <span class="academy-art-tag">LOGIC · TOOLS · PROJECTS</span>
+                <span class="academy-art-symbol">$_</span>
+              </div>
+              <div class="academy-card-body">
+                <div class="academy-card-meta"><span>PROGRAMMING</span><span class="level-chip">Beginner</span></div>
+                <h3>Programming & Developer Tools</h3>
+                <p>Explore programming logic, Git concepts, command lines and developer workflows.</p>
+                <div class="academy-card-facts"><span>6 demo lessons</span><span>Self-paced</span></div>
+                <div class="academy-progress"><div class="progress-track"><div class="progress-fill" data-course-bar style="width:0%"></div></div><span data-course-percent>0%</span></div>
+                <a class="button button-primary academy-card-cta" href="course-details.html?course=programming">View course →</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="empty-state academy-empty" data-course-empty hidden>
+            <h3>No courses found</h3>
+            <p>Try another search term or select a different category.</p>
+            <button class="button button-ghost" type="button" data-reset-courses>Reset filters</button>
+          </div>
+        </section>
+
+        <footer class="dashboard-footer">
+          <span>© <span data-current-year></span> TechVision</span>
+          <span>Learning catalog prototype · Demo content</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

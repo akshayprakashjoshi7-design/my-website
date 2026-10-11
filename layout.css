@@ -1,0 +1,53 @@
+.container {
+  width: min(var(--container), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.stack-sm {
+  display: grid;
+  gap: 8px;
+}

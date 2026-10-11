@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Log in to your TechVision learning workspace.">
+
+  <title>Log in — TechVision</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="login" data-depth="0">
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="TechVision home">
+        <span class="brand-mark">TV</span>
+        <span>TechVision</span>
+      </a>
+
+      <div class="nav-actions">
+        <button
+          class="icon-button"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch theme"
+          title="Switch theme"
+        >☀</button>
+
+        <a class="button button-ghost" href="signup.html">
+          Create account
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell container">
+      <aside class="auth-aside">
+        <span class="eyebrow">Welcome back</span>
+
+        <h1>Continue your <span class="gradient-text">tech journey.</span></h1>
+
+        <p>
+          Return to your learning workspace, revisit your progress and
+          keep building practical technology skills.
+        </p>
+
+        <div class="auth-benefits">
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>Keep learning resources organized</span>
+          </div>
+
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>Practise development skills</span>
+          </div>
+
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>Explore cybersecurity fundamentals</span>
+          </div>
+        </div>
+
+        <div class="auth-quote">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p class="mb-0">
+            Consistency turns small learning steps into meaningful skills.
+          </p>
+        </div>
+      </aside>
+
+      <section class="auth-card" aria-labelledby="login-title">
+        <div class="auth-card-heading">
+          <span class="auth-mobile-mark">TV · TECHVISION</span>
+          <h2 id="login-title">Log in</h2>
+          <p>Enter your demo account credentials to continue.</p>
+        </div>
+
+        <div
+          class="alert alert-info auth-status"
+          data-form-status
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+
+        <form id="login-form" class="auth-form" novalidate>
+          <div class="form-field">
+            <label for="login-email">Email address</label>
+            <input
+              id="login-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="username"
+              maxlength="254"
+              required
+              aria-describedby="login-email-error"
+            >
+            <small
+              class="field-error"
+              id="login-email-error"
+              data-error-for="email"
+            ></small>
+          </div>
+
+          <div class="form-field">
+            <div class="label-row">
+              <label for="login-password">Password</label>
+              <a class="auth-inline-link" href="forgot-password.html">
+                Forgot password?
+              </a>
+            </div>
+
+            <div class="password-wrap">
+              <input
+                id="login-password"
+                name="password"
+                type="password"
+                placeholder="Enter your password"
+                autocomplete="current-password"
+                required
+                aria-describedby="login-password-error"
+              >
+
+              <button
+                class="password-toggle"
+                type="button"
+                data-password-toggle="login-password"
+                aria-label="Show password"
+                aria-pressed="false"
+              >Show</button>
+            </div>
+
+            <small
+              class="field-error"
+              id="login-password-error"
+              data-error-for="password"
+            ></small>
+          </div>
+
+          <button
+            class="button button-primary button-large auth-submit"
+            type="submit"
+          >
+            Log in <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <div class="auth-divider">
+          <span>OR</span>
+        </div>
+
+        <button
+          class="button button-ghost auth-submit"
+          type="button"
+          data-demo-login
+        >
+          Continue with demo account
+        </button>
+
+        <div class="demo-credentials">
+          <strong>Public demo credentials</strong>
+          <p class="mb-0">Email: demo@techvision.dev</p>
+          <p class="mb-0">Password: TechVisionDemo123!</p>
+          <small>
+            These credentials are included in the frontend demo.
+            Do not use them for a real account.
+          </small>
+        </div>
+
+        <p class="auth-bottom-text">
+          New to TechVision?
+          <a class="auth-inline-link" href="signup.html">Create an account</a>
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <div class="container flex-between">
+      <small>© <span data-current-year></span> TechVision</small>
+      <a href="index.html">Back to homepage</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

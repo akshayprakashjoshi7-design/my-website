@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101827">
+  <title>Code Studio | TechVision</title>
+
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/code-studio.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body data-page="code-studio" data-depth="1">
+  <div class="studio-shell">
+    <header class="studio-topbar">
+      <a class="studio-brand" href="../pages/dashboard.html">
+        <span class="studio-brand-mark">TV</span>
+        <span>
+          <strong>TechVision</strong>
+          <small>Code Studio</small>
+        </span>
+      </a>
+
+      <div class="studio-topbar-actions">
+        <span class="studio-status">
+          <span class="status-dot"></span>
+          Browser workspace
+        </span>
+        <a class="button button-secondary" href="dashboard.html">
+          Dashboard
+        </a>
+      </div>
+    </header>
+
+    <main class="studio-main">
+      <section class="studio-heading">
+        <div>
+          <p class="studio-eyebrow">DEVELOPMENT WORKSPACE</p>
+          <h1>Code Studio</h1>
+          <p class="studio-subtitle">
+            Write code, run your preview, and save your project locally.
+          </p>
+        </div>
+
+        <div class="studio-heading-actions">
+          <button class="button button-secondary" id="new-project-btn" type="button">
+            New project
+          </button>
+          <button class="button button-primary" id="run-code-btn" type="button">
+            ▶ Run code
+          </button>
+        </div>
+      </section>
+
+      <section class="studio-toolbar" aria-label="Project controls">
+        <div class="studio-project-name">
+          <label for="project-name">Project name</label>
+          <input
+            id="project-name"
+            type="text"
+            maxlength="60"
+            value="My First Website"
+            placeholder="Enter project name"
+          >
+        </div>
+
+        <div class="studio-project-actions">
+          <button class="button button-secondary" id="save-project-btn" type="button">
+            Save
+          </button>
+          <button class="button button-secondary" id="download-project-btn" type="button">
+            Download HTML
+          </button>
+        </div>
+      </section>
+
+      <p class="studio-message" id="studio-message" role="status" aria-live="polite"></p>
+
+      <section class="studio-workspace">
+        <div class="studio-editor-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Editor</h2>
+              <p>Edit the files below</p>
+            </div>
+            <span class="editor-language-badge">HTML / CSS / JS</span>
+          </div>
+
+          <div class="editor-tabs" role="tablist" aria-label="Code files">
+            <button class="editor-tab is-active" type="button"
+              role="tab" aria-selected="true" data-editor-tab="html">
+              <span class="file-dot html-dot"></span> index.html
+            </button>
+            <button class="editor-tab" type="button"
+              role="tab" aria-selected="false" data-editor-tab="css">
+              <span class="file-dot css-dot"></span> style.css
+            </button>
+            <button class="editor-tab" type="button"
+              role="tab" aria-selected="false" data-editor-tab="js">
+              <span class="file-dot js-dot"></span> script.js
+            </button>
+          </div>
+
+          <div class="editor-content">
+            <label class="editor-label" for="html-editor">HTML editor</label>
+            <textarea id="html-editor" class="code-editor is-visible"
+              data-editor="html" spellcheck="false" autocapitalize="off"
+              autocomplete="off" autocorrect="off"
+              aria-label="HTML code editor"><main class="card">
+  <span class="tag">TECHVISION</span>
+  <h1>Hello, Developer!</h1>
+  <p>Your coding journey starts here.</p>
+  <button id="hello-button">Click me</button>
+  <p id="output"></p>
+</main></textarea>
+
+            <label class="editor-label" for="css-editor">CSS editor</label>
+            <textarea id="css-editor" class="code-editor"
+              data-editor="css" spellcheck="false" autocapitalize="off"
+              autocomplete="off" autocorrect="off"
+              aria-label="CSS code editor">* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #101827;
+  color: #f4f7fb;
+  font-family: system-ui, sans-serif;
+}
+
+.card {
+  max-width: 560px;
+  padding: 42px;
+  border: 1px solid #334155;
+  border-radius: 20px;
+  background: #182338;
+  text-align: center;
+}
+
+.tag {
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+h1 {
+  margin: 18px 0 12px;
+}
+
+p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+button {
+  margin-top: 12px;
+  padding: 12px 20px;
+  border: 0;
+  border-radius: 10px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}</textarea>
+
+            <label class="editor-label" for="js-editor">JavaScript editor</label>
+            <textarea id="js-editor" class="code-editor"
+              data-editor="js" spellcheck="false" autocapitalize="off"
+              autocomplete="off" autocorrect="off"
+              aria-label="JavaScript code editor">const button = document.querySelector("#hello-button");
+const output = document.querySelector("#output");
+
+button.addEventListener("click", () => {
+  output.textContent = "Great work! Your JavaScript is running.";
+});</textarea>
+          </div>
+
+          <footer class="editor-footer">
+            <span id="editor-status">Ready</span>
+            <span>UTF-8 · Browser preview</span>
+          </footer>
+        </div>
+
+        <div class="studio-preview-panel">
+          <div class="panel-heading preview-heading">
+            <div>
+              <h2>Live Preview</h2>
+              <p>Rendered website output</p>
+            </div>
+            <button class="button button-secondary button-small"
+              id="refresh-preview-btn" type="button">
+              Refresh
+            </button>
+          </div>
+
+          <div class="preview-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="preview-address">localhost / preview</span>
+          </div>
+
+          <iframe
+            id="code-preview"
+            class="code-preview"
+            title="Your website preview"
+            sandbox="allow-scripts"
+            referrerpolicy="no-referrer"
+          ></iframe>
+
+          <p class="preview-note">
+            Preview scripts run in a sandboxed frame. Avoid putting secrets
+            or sensitive data in your code.
+          </p>
+        </div>
+      </section>
+
+      <section class="saved-projects-panel">
+        <div class="panel-heading">
+          <div>
+            <h2>Saved projects</h2>
+            <p>Projects saved in this browser</p>
+          </div>
+          <span class="project-count" id="saved-project-count">0 projects</span>
+        </div>
+
+        <div class="saved-project-list" id="saved-project-list">
+          <p class="empty-projects">Your saved projects will appear here.</p>
+        </div>
+      </section>
+
+      <section class="studio-notice">
+        <strong>Demo limitation:</strong>
+        Projects are stored in this browser only. They are not synced to an
+        account or server. Clear browser storage and saved projects may be lost.
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

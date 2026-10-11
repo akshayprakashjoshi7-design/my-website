@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090d18">
+  <meta name="description" content="Create your TechVision learning workspace.">
+
+  <title>Create Account — TechVision</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body data-page="signup" data-depth="0">
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html" aria-label="TechVision home">
+        <span class="brand-mark">TV</span>
+        <span>TechVision</span>
+      </a>
+
+      <div class="nav-actions">
+        <button
+          class="icon-button"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch theme"
+          title="Switch theme"
+        >☀</button>
+
+        <a class="button button-ghost" href="login.html">
+          Log in
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="auth-main">
+    <section class="auth-shell container">
+      <aside class="auth-aside">
+        <span class="eyebrow">Start learning today</span>
+
+        <h1>Build skills. <span class="gradient-text">Create possibilities.</span></h1>
+
+        <p>
+          Set up your TechVision demo workspace and explore learning
+          paths for development, programming and cybersecurity.
+        </p>
+
+        <div class="auth-benefits">
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>A personalized demo profile</span>
+          </div>
+
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>A place to track learning activities</span>
+          </div>
+
+          <div class="auth-benefit">
+            <span class="benefit-check">✓</span>
+            <span>Access to the platform prototype</span>
+          </div>
+        </div>
+
+        <div class="auth-quote">
+          <span class="quote-mark" aria-hidden="true">“</span>
+          <p class="mb-0">
+            Every expert starts by learning one new thing at a time.
+          </p>
+        </div>
+      </aside>
+
+      <section class="auth-card" aria-labelledby="signup-title">
+        <div class="auth-card-heading">
+          <span class="auth-mobile-mark">TV · TECHVISION</span>
+          <h2 id="signup-title">Create your account</h2>
+          <p>Enter your details to start a demo session.</p>
+        </div>
+
+        <div
+          class="alert alert-info auth-status"
+          data-form-status
+          role="status"
+          aria-live="polite"
+          hidden
+        ></div>
+
+        <form id="signup-form" class="auth-form" novalidate>
+          <div class="form-field">
+            <label for="signup-name">Full name</label>
+            <input
+              id="signup-name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              autocomplete="name"
+              minlength="2"
+              maxlength="80"
+              required
+              aria-describedby="signup-name-error"
+            >
+            <small
+              class="field-error"
+              id="signup-name-error"
+              data-error-for="name"
+            ></small>
+          </div>
+
+          <div class="form-field">
+            <label for="signup-email">Email address</label>
+            <input
+              id="signup-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              maxlength="254"
+              required
+              aria-describedby="signup-email-error"
+            >
+            <small
+              class="field-error"
+              id="signup-email-error"
+              data-error-for="email"
+            ></small>
+          </div>
+
+          <div class="form-field">
+            <label for="signup-password">Password</label>
+
+            <div class="password-wrap">
+              <input
+                id="signup-password"
+                name="password"
+                type="password"
+                placeholder="At least 8 characters"
+                autocomplete="new-password"
+                minlength="8"
+                maxlength="128"
+                required
+                aria-describedby="signup-password-error password-hint"
+              >
+
+              <button
+                class="password-toggle"
+                type="button"
+                data-password-toggle="signup-password"
+                aria-label="Show password"
+                aria-pressed="false"
+              >Show</button>
+            </div>
+
+            <small class="field-hint" id="password-hint">
+              Use 8–128 characters.
+            </small>
+
+            <small
+              class="field-error"
+              id="signup-password-error"
+              data-error-for="password"
+            ></small>
+          </div>
+
+          <div class="form-field">
+            <label for="signup-confirm-password">Confirm password</label>
+
+            <div class="password-wrap">
+              <input
+                id="signup-confirm-password"
+                name="confirmPassword"
+                type="password"
+                placeholder="Re-enter your password"
+                autocomplete="new-password"
+                minlength="8"
+                maxlength="128"
+                required
+                aria-describedby="signup-confirm-error"
+              >
+
+              <button
+                class="password-toggle"
+                type="button"
+                data-password-toggle="signup-confirm-password"
+                aria-label="Show confirmation password"
+                aria-pressed="false"
+              >Show</button>
+            </div>
+
+            <small
+              class="field-error"
+              id="signup-confirm-error"
+              data-error-for="confirmPassword"
+            ></small>
+          </div>
+
+          <label class="auth-consent">
+            <input
+              type="checkbox"
+              name="terms"
+              id="signup-terms"
+              required
+            >
+            <span>
+              I understand this is a frontend demo and my password will
+              not be saved as a real account credential.
+            </span>
+          </label>
+
+          <small
+            class="field-error"
+            data-error-for="terms"
+          ></small>
+
+          <button
+            class="button button-primary button-large auth-submit"
+            type="submit"
+          >
+            Create demo account <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="auth-bottom-text">
+          Already have a demo account?
+          <a class="auth-inline-link" href="login.html">Log in</a>
+        </p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="auth-footer">
+    <div class="container flex-between">
+      <small>© <span data-current-year></span> TechVision</small>
+      <a href="index.html">Back to homepage</a>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

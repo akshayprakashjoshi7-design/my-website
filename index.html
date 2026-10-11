@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="description"
+    content="TechVision is a learning and development platform for programming, cybersecurity fundamentals and hands-on projects."
+  >
+
+  <meta name="theme-color" content="#090d18">
+  <title>TechVision — Learn. Build. Secure. Create.</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <style>
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding-block: 90px 100px;
+    }
+
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: -170px;
+      right: -150px;
+      width: 600px;
+      height: 600px;
+      content: "";
+      background: radial-gradient(
+        circle,
+        rgba(102, 133, 255, 0.15),
+        transparent 68%
+      );
+      pointer-events: none;
+    }
+
+    .hero-copy h1 {
+      margin-bottom: 22px;
+    }
+
+    .hero-copy > p {
+      max-width: 590px;
+      margin-bottom: 28px;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 25px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    .hero-note span::before {
+      content: "✓";
+      margin-right: 7px;
+      color: var(--green);
+    }
+
+    .dashboard-preview {
+      position: relative;
+      padding: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .preview-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .window-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .window-dots i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--text-muted);
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .preview-stat {
+      padding: 16px;
+      background: var(--surface-raised);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .preview-stat strong {
+      display: block;
+      margin-top: 8px;
+      font-size: 1.45rem;
+    }
+
+    .preview-stat small {
+      color: var(--text-muted);
+    }
+
+    .preview-course {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 14px;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .course-icon,
+    .feature-icon {
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(102, 133, 255, 0.13);
+      font-size: 1.2rem;
+    }
+
+    .preview-course strong {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    .preview-course small {
+      color: var(--text-muted);
+    }
+
+    .feature-card h3 {
+      margin: 17px 0 9px;
+    }
+
+    .feature-card p {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+    }
+
+    .audience-card h3 {
+      margin-top: 14px;
+    }
+
+    .cta-panel {
+      padding: clamp(26px, 5vw, 55px);
+      text-align: center;
+      background:
+        radial-gradient(
+          circle at 20% 0%,
+          rgba(102, 133, 255, 0.17),
+          transparent 40%
+        ),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+    }
+
+    .cta-panel p {
+      max-width: 570px;
+      margin: 0 auto 25px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding-block: 60px 70px;
+      }
+    }
+  </style>
+</head>
+
+<body data-page="home" data-depth="0">
+
+  <header class="site-header">
+    <div class="container nav-container">
+
+      <a class="brand" href="index.html" aria-label="TechVision home">
+        <span class="brand-mark">TV</span>
+        <span>TechVision</span>
+      </a>
+
+      <nav class="nav-links" data-nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#learning">Learning paths</a>
+        <a href="#about">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button
+          class="icon-button"
+          type="button"
+          data-theme-toggle
+          aria-label="Switch theme"
+          title="Switch theme"
+        >☀</button>
+
+        <a class="button button-ghost desktop-only" href="login.html">
+          Log in
+        </a>
+
+        <a class="button button-primary" href="signup.html">
+          Get started
+        </a>
+
+        <button
+          class="icon-button menu-toggle"
+          type="button"
+          data-nav-toggle
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+        >☰</button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <div class="hero-copy">
+          <span class="eyebrow">Your technology learning space</span>
+
+          <h1>
+            Learn technology.
+            <span class="gradient-text">Build your future.</span>
+          </h1>
+
+          <p>
+            Explore programming, cybersecurity fundamentals and developer
+            tools in one organized learning environment. Learn concepts,
+            practise your skills and build projects at your own pace.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary button-large" href="signup.html">
+              Start learning <span aria-hidden="true">→</span>
+            </a>
+
+            <a class="button button-ghost button-large" href="#features">
+              Explore features
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <span>Structured learning</span>
+            <span>Hands-on practice</span>
+            <span>Beginner friendly</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="dashboard-preview">
+
+            <div class="preview-topbar">
+              <div class="window-dots" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <span class="badge">Learning workspace</span>
+            </div>
+
+            <div class="mt-3">
+              <span class="muted">Welcome to your workspace</span>
+              <h3 class="mt-1 mb-0">Your next skill starts here.</h3>
+            </div>
+
+            <div class="preview-grid">
+              <div class="preview-stat">
+                <small>Learning paths</small>
+                <strong>03</strong>
+                <span class="muted">Explore topics</span>
+              </div>
+
+              <div class="preview-stat">
+                <small>Practice tools</small>
+                <strong>04+</strong>
+                <span class="muted">Build and learn</span>
+              </div>
+            </div>
+
+            <div class="preview-course">
+              <div class="course-icon" aria-hidden="true">⌘</div>
+              <div>
+                <strong>Programming fundamentals</strong>
+                <small>Learn the building blocks</small>
+              </div>
+            </div>
+
+            <div class="preview-course">
+              <div class="course-icon" aria-hidden="true">⌁</div>
+              <div>
+                <strong>Cybersecurity essentials</strong>
+                <small>Understand defensive security</small>
+              </div>
+            </div>
+
+            <div class="preview-course">
+              <div class="course-icon" aria-hidden="true">⌨</div>
+              <div>
+                <strong>Developer workspace</strong>
+                <small>Experiment with code</small>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="features">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">One platform, multiple possibilities</span>
+          <h2>Everything you need to <span class="gradient-text">keep growing</span></h2>
+          <p>
+            Build a learning routine around practical tools, organized
+            resources and projects that help you understand technology.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">▤</div>
+            <h3>Tech Academy</h3>
+            <p>
+              Organize lessons, follow course modules and track your
+              learning progress in one place.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">⌨</div>
+            <h3>Code Studio</h3>
+            <p>
+              Experiment with HTML, CSS and JavaScript using a browser-based
+              coding workspace.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">⌁</div>
+            <h3>Cybersecurity Lab</h3>
+            <p>
+              Study security concepts and practise safe exercises in
+              authorized learning environments.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">▧</div>
+            <h3>Resource Library</h3>
+            <p>
+              Keep useful references, learning notes, guides and project
+              materials organized.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">⌘</div>
+            <h3>Developer Tools</h3>
+            <p>
+              Use a simulated terminal, personal notes and repository
+              management demonstrations.
+            </p>
+          </article>
+
+          <article class="card feature-card">
+            <div class="feature-icon" aria-hidden="true">↗</div>
+            <h3>Progress Tracking</h3>
+            <p>
+              Review completed lessons, maintain your learning goals and
+              identify your next step.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="learning">
+      <div class="container split-layout">
+
+        <div>
+          <span class="eyebrow">Learn by doing</span>
+          <h2>Turn concepts into <span class="gradient-text">practical skills</span></h2>
+
+          <p>
+            Move from understanding the basics to creating small projects.
+            Follow a structured path, revisit your notes and use practice
+            tools to reinforce what you learn.
+          </p>
+
+          <div class="stack mt-3">
+            <div class="flex-row">
+              <span class="feature-icon" aria-hidden="true">01</span>
+              <div>
+                <strong>Learn the fundamentals</strong>
+                <p class="mb-0">Build a strong foundation before moving ahead.</p>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <span class="feature-icon" aria-hidden="true">02</span>
+              <div>
+                <strong>Practise with projects</strong>
+                <p class="mb-0">Apply your knowledge through small exercises.</p>
+              </div>
+            </div>
+
+            <div class="flex-row">
+              <span class="feature-icon" aria-hidden="true">03</span>
+              <div>
+                <strong>Track your progress</strong>
+                <p class="mb-0">Review your work and keep learning consistently.</p>
+              </div>
+            </div>
+          </div>
+
+          <a class="button button-primary mt-3" href="signup.html">
+            Create your workspace →
+          </a>
+        </div>
+
+        <div class="card">
+          <span class="eyebrow">Learning paths</span>
+
+          <div class="preview-course">
+            <div class="course-icon" aria-hidden="true">{"</>"}</div>
+            <div>
+              <strong>Web Development</strong>
+              <small>HTML · CSS · JavaScript</small>
+            </div>
+          </div>
+
+          <div class="preview-course">
+            <div class="course-icon" aria-hidden="true">⌁</div>
+            <div>
+              <strong>Cybersecurity Fundamentals</strong>
+              <small>Networking · Linux · Security basics</small>
+            </div>
+          </div>
+
+          <div class="preview-course">
+            <div class="course-icon" aria-hidden="true">⌘</div>
+            <div>
+              <strong>Programming & Tools</strong>
+              <small>Logic · Git concepts · Developer workflow</small>
+            </div>
+          </div>
+
+          <p class="muted mt-3 mb-0">
+            Learning content and tools will be populated in subsequent
+            development batches.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="eyebrow">Designed for learners</span>
+          <h2>A workspace for your <span class="gradient-text">next step</span></h2>
+          <p>
+            Whether you're starting with the basics or expanding your
+            technical knowledge, TechVision gives you a place to organize
+            your learning journey.
+          </p>
+        </div>
+
+        <div class="audience-grid">
+
+          <article class="card audience-card">
+            <div class="feature-icon" aria-hidden="true">✦</div>
+            <h3>Beginners</h3>
+            <p>
+              Start with core concepts and gradually work through
+              structured learning material.
+            </p>
+          </article>
+
+          <article class="card audience-card">
+            <div class="feature-icon" aria-hidden="true">⌨</div>
+            <h3>Developers</h3>
+            <p>
+              Practise coding, collect references and experiment with
+              small web development projects.
+            </p>
+          </article>
+
+          <article class="card audience-card">
+            <div class="feature-icon" aria-hidden="true">◈</div>
+            <h3>Security learners</h3>
+            <p>
+              Learn defensive security principles and use tools only
+              in systems you own or have permission to test.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel">
+          <span class="eyebrow">Your journey begins here</span>
+          <h2>Ready to build something useful?</h2>
+          <p>
+            Create your demo workspace and explore the TechVision learning
+            experience as the platform takes shape.
+          </p>
+          <a class="button button-primary button-large" href="signup.html">
+            Get started for free →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="index.html">
+          <span class="brand-mark">TV</span>
+          <span>TechVision</span>
+        </a>
+
+        <p class="mt-1 mb-0">
+          Learn. Build. Secure. Create.
+        </p>
+
+        <small class="muted">
+          © <span data-current-year></span> TechVision. Learning prototype.
+        </small>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#features">Features</a>
+        <a href="#learning">Learning paths</a>
+        <a href="login.html">Log in</a>
+        <a href="signup.html">Sign up</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create and manage demo learning resources in TechVision.">
+  <title>Creator Portal — TechVision</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/resources.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body data-page="creator" data-depth="1">
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="dashboard-sidebar" data-nav>
+      <a class="brand dashboard-brand" href="../index.html">
+        <span class="brand-mark">TV</span><span>TechVision</span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="sidebar-nav" aria-label="Workspace">
+        <a class="sidebar-link" href="dashboard.html"><span class="sidebar-icon">▦</span>Dashboard</a>
+        <a class="sidebar-link" href="academy.html"><span class="sidebar-icon">▤</span>Tech Academy</a>
+        <a class="sidebar-link" href="progress.html"><span class="sidebar-icon">↗</span>My Progress</a>
+        <a class="sidebar-link" href="resources.html"><span class="sidebar-icon">▧</span>Resources</a>
+      </nav>
+
+      <div class="sidebar-label">CREATOR TOOLS</div>
+      <nav class="sidebar-nav" aria-label="Creator tools">
+        <a class="sidebar-link" href="creator-portal.html" aria-current="page">
+          <span class="sidebar-icon">✎</span>Creator Portal
+        </a>
+        <a class="sidebar-link" href="code-studio.html"><span class="sidebar-icon">⌨</span>Code Studio</a>
+        <a class="sidebar-link" href="notepad.html"><span class="sidebar-icon">▣</span>My Notes</a>
+      </nav>
+
+      <div class="sidebar-label">SECURITY & ACCOUNT</div>
+      <nav class="sidebar-nav" aria-label="Security and account">
+        <a class="sidebar-link" href="cybersecurity.html"><span class="sidebar-icon">⬡</span>Cybersecurity</a>
+        <a class="sidebar-link" href="assistant.html"><span class="sidebar-icon">✧</span>AI Assistant</a>
+        <a class="sidebar-link" href="profile.html"><span class="sidebar-icon">◉</span>My Profile</a>
+        <a class="sidebar-link" href="settings.html"><span class="sidebar-icon">⚙</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-demo-note">
+          <span class="demo-status-dot"></span>
+          <div><strong>Demo workspace</strong><small>Local prototype mode</small></div>
+        </div>
+        <button class="sidebar-link sidebar-logout" type="button" data-logout>
+          <span class="sidebar-icon">↪</span>Log out
+        </button>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="icon-button dashboard-menu-toggle" type="button"
+            data-nav-toggle aria-label="Toggle sidebar"
+            aria-expanded="false" aria-controls="dashboard-sidebar">☰</button>
+          <div>
+            <div class="topbar-eyebrow">CREATE AND ORGANIZE</div>
+            <div class="topbar-title">Creator Portal</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span class="demo-pill"><span class="demo-status-dot"></span>Demo mode</span>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme">☀</button>
+          <a class="topbar-avatar" href="profile.html" data-user-initial aria-label="Your profile">U</a>
+        </div>
+      </header>
+
+      <main class="dashboard-content resource-content">
+        <section class="creator-hero">
+          <div>
+            <span class="eyebrow">TECHVISION STUDIO</span>
+            <h1>Turn what you know into <span class="gradient-text">something useful.</span></h1>
+            <p>Create and organize draft learning resources. Publishing here only updates your local demo workspace.</p>
+          </div>
+          <div class="creator-hero-symbol" aria-hidden="true">✎</div>
+        </section>
+
+        <section class="creator-metrics" aria-label="Creator statistics">
+          <article class="creator-metric-card">
+            <span>My resources</span>
+            <strong data-creator-total>0</strong>
+          </article>
+          <article class="creator-metric-card">
+            <span>Published in demo</span>
+            <strong data-creator-published>0</strong>
+          </article>
+          <article class="creator-metric-card">
+            <span>Drafts</span>
+            <strong data-creator-drafts>0</strong>
+          </article>
+        </section>
+
+        <div class="creator-layout">
+          <section class="creator-form-panel">
+            <div class="section-title-row">
+              <div>
+                <h2 data-creator-form-heading>Create a resource</h2>
+                <p>Add a useful reference or learning note.</p>
+              </div>
+            </div>
+
+            <form id="creator-resource-form">
+              <input type="hidden" name="id" id="creator-resource-id">
+
+              <div class="form-group">
+                <label for="creator-title">Resource title</label>
+                <input id="creator-title" name="title" type="text"
+                  maxlength="100" placeholder="e.g. Introduction to Git" required>
+              </div>
+
+              <div class="form-group">
+                <label for="creator-category">Category</label>
+                <select id="creator-category" name="category" required>
+                  <option value="development">Development</option>
+                  <option value="programming">Programming</option>
+                  <option value="cybersecurity">Cybersecurity</option>
+                  <option value="linux">Linux</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="creator-description">Description</label>
+                <textarea id="creator-description" name="description"
+                  rows="4" maxlength="500"
+                  placeholder="What will a learner get from this resource?"
+                  required></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="creator-url">Reference URL (optional)</label>
+                <input id="creator-url" name="url" type="url" maxlength="500"
+                  placeholder="https://example.com">
+                <small class="muted-text">Only HTTP and HTTPS URLs are accepted.</small>
+              </div>
+
+              <div class="form-group">
+                <label for="creator-status">Status</label>
+                <select id="creator-status" name="status">
+                  <option value="draft">Save as draft</option>
+                  <option value="published">Publish in demo catalog</option>
+                </select>
+              </div>
+
+              <div class="creator-form-actions">
+                <button class="button button-primary" type="submit" id="creator-submit">
+                  Save resource
+                </button>
+                <button class="button button-ghost" type="button" data-creator-cancel hidden>
+                  Cancel edit
+                </button>
+              </div>
+            </form>
+
+            <div class="alert alert-info" data-creator-message role="status"
+              aria-live="polite" hidden></div>
+          </section>
+
+          <section class="creator-list-panel">
+            <div class="section-title-row creator-list-heading">
+              <div>
+                <h2>My content</h2>
+                <p>Manage resources stored in your browser.</p>
+              </div>
+              <button class="button button-ghost button-small" type="button" data-creator-export>
+                Export JSON
+              </button>
+            </div>
+
+            <div class="creator-list" data-creator-list>
+              <div class="empty-state">
+                <h3>No creator content yet</h3>
+                <p>Create your first resource using the form.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="alert alert-info">
+          <strong>Demo limitation:</strong>
+          Content is not uploaded to a server, shared with other users or published publicly.
+          A production creator portal needs authentication, role-based permissions, server storage
+          and content moderation.
+        </div>
+
+        <footer class="dashboard-footer">
+          <span>© <span data-current-year></span> TechVision</span>
+          <span>Creator tools prototype · Local storage</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+TechVision/
+│
+├── index.html
+├── login.html
+├── signup.html
+├── forgot-password.html
+│
+├── pages/
+│   ├── dashboard.html
+│   ├── academy.html
+│   ├── course-details.html
+│   ├── my-learning.html
+│   ├── progress.html
+│   ├── resources.html
+│   ├── code-studio.html
+│   ├── terminal.html
+│   ├── repositories.html
+│   ├── notepad.html
+│   ├── assistant.html
+│   ├── cybersecurity.html
+│   ├── profile.html
+│   └── settings.html
+│
+├── creator/
+│   ├── dashboard.html
+│   ├── courses.html
+│   ├── create-course.html
+│   ├── edit-course.html
+│   ├── upload-resources.html
+│   └── students.html
+│
+├── assets/
+│   ├── images/
+│   ├── icons/
+│   ├── logos/
+│   └── fonts/
+│
+├── css/
+│   ├── style.css
+│   ├── variables.css
+│   ├── layout.css
+│   ├── components.css
+│   ├── auth.css
+│   ├── dashboard.css
+│   ├── academy.css
+│   ├── resources.css
+│   ├── code-studio.css
+│   ├── terminal.css
+│   ├── creator.css
+│   └── responsive.css
+│
+├── js/
+│   ├── app.js
+│   ├── config.js
+│   │
+│   ├── modules/
+│   │   ├── auth.js
+│   │   ├── navigation.js
+│   │   ├── dashboard.js
+│   │   ├── courses.js
+│   │   ├── progress.js
+│   │   ├── resources.js
+│   │   ├── code-editor.js
+│   │   ├── terminal.js
+│   │   ├── repositories.js
+│   │   ├── notepad.js
+│   │   ├── assistant.js
+│   │   ├── cybersecurity.js
+│   │   └── creator.js
+│   │
+│   ├── utils/
+│   │   ├── storage.js
+│   │   ├── validators.js
+│   │   └── helpers.js
+│   │
+│   └── data/
+│       ├── courses.js
+│       └── resources.js
+│
+├── resources/
+│   ├── pdfs/
+│   ├── notes/
+│   ├── code-examples/
+│   └── project-files/
+│
+└── README.md

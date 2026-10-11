@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View TechVision course information and demo lesson progress.">
+  <title>Course Details — TechVision</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/academy.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+</head>
+
+<body data-page="courseDetails" data-depth="1">
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="dashboard-sidebar" data-nav>
+      <a class="brand dashboard-brand" href="../index.html">
+        <span class="brand-mark">TV</span><span>TechVision</span>
+      </a>
+
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="sidebar-nav" aria-label="Workspace">
+        <a class="sidebar-link" href="dashboard.html"><span class="sidebar-icon">▦</span>Dashboard</a>
+        <a class="sidebar-link" href="academy.html" aria-current="page"><span class="sidebar-icon">▤</span>Tech Academy</a>
+        <a class="sidebar-link" href="progress.html"><span class="sidebar-icon">↗</span>My Progress</a>
+        <a class="sidebar-link" href="resources.html"><span class="sidebar-icon">▧</span>Resources</a>
+      </nav>
+
+      <div class="sidebar-label">DEVELOPMENT</div>
+      <nav class="sidebar-nav" aria-label="Development tools">
+        <a class="sidebar-link" href="code-studio.html"><span class="sidebar-icon">⌨</span>Code Studio</a>
+        <a class="sidebar-link" href="terminal.html"><span class="sidebar-icon">$_</span>Terminal Lab</a>
+        <a class="sidebar-link" href="repositories.html"><span class="sidebar-icon">⑂</span>Repositories</a>
+        <a class="sidebar-link" href="notepad.html"><span class="sidebar-icon">▣</span>My Notes</a>
+      </nav>
+
+      <div class="sidebar-label">SECURITY & ACCOUNT</div>
+      <nav class="sidebar-nav" aria-label="Security and account">
+        <a class="sidebar-link" href="cybersecurity.html"><span class="sidebar-icon">⬡</span>Cybersecurity</a>
+        <a class="sidebar-link" href="assistant.html"><span class="sidebar-icon">✧</span>AI Assistant</a>
+        <a class="sidebar-link" href="profile.html"><span class="sidebar-icon">◉</span>My Profile</a>
+        <a class="sidebar-link" href="settings.html"><span class="sidebar-icon">⚙</span>Settings</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="sidebar-demo-note"><span class="demo-status-dot"></span><div><strong>Demo workspace</strong><small>Local prototype mode</small></div></div>
+        <button class="sidebar-link sidebar-logout" type="button" data-logout><span class="sidebar-icon">↪</span>Log out</button>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button class="icon-button dashboard-menu-toggle" type="button" data-nav-toggle
+            aria-label="Toggle sidebar" aria-expanded="false" aria-controls="dashboard-sidebar">☰</button>
+          <div>
+            <div class="topbar-eyebrow">TECHVISION ACADEMY</div>
+            <div class="topbar-title">Course details</div>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <span class="demo-pill"><span class="demo-status-dot"></span>Demo mode</span>
+          <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme">☀</button>
+          <a class="topbar-avatar" href="profile.html" data-user-initial aria-label="Your profile">U</a>
+        </div>
+      </header>
+
+      <main class="dashboard-content academy-content">
+        <a class="back-link" href="academy.html">← Back to academy</a>
+
+        <section class="course-detail-hero">
+          <div class="course-detail-copy">
+            <span class="eyebrow" data-detail-category>LEARNING PATH</span>
+            <h1 data-detail-title>Course title</h1>
+            <p data-detail-description>Explore this learning path and work through its demo lessons.</p>
+            <div class="course-detail-tags">
+              <span class="level-chip" data-detail-level>Beginner</span>
+              <span class="level-chip">6 demo lessons</span>
+              <span class="level-chip">Self-paced</span>
+            </div>
+          </div>
+          <div class="course-detail-art" data-detail-art aria-hidden="true">&lt;/&gt;</div>
+        </section>
+
+        <div class="course-detail-layout">
+          <section class="course-curriculum-panel">
+            <div class="section-title-row">
+              <div>
+                <h2>Course curriculum</h2>
+                <p>Mark a lesson complete when you finish the demo activity.</p>
+              </div>
+            </div>
+
+            <div class="course-detail-progress">
+              <div class="course-detail-progress-copy">
+                <span>Course progress</span>
+                <strong data-detail-progress>0%</strong>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" data-detail-progress-bar style="width:0%"></div>
+              </div>
+              <small data-detail-completion>0 of 6 lessons completed</small>
+            </div>
+
+            <div class="curriculum-list" data-curriculum-list>
+              <div class="empty-state">Loading curriculum…</div>
+            </div>
+
+            <div class="alert alert-info course-demo-disclaimer">
+              Lessons are introductory demo activities, not hosted video lectures or accredited training.
+            </div>
+          </section>
+
+          <aside class="course-detail-aside">
+            <div class="course-summary-card">
+              <span class="eyebrow">YOUR LEARNING PATH</span>
+              <h3>Keep moving forward</h3>
+              <p>Complete the lesson activities to update your local progress.</p>
+
+              <div class="summary-stat">
+                <span>Completed lessons</span>
+                <strong data-summary-completed>0 / 6</strong>
+              </div>
+
+              <div class="summary-stat">
+                <span>Current progress</span>
+                <strong data-summary-progress>0%</strong>
+              </div>
+
+              <a class="button button-primary course-summary-button" href="progress.html">View all progress →</a>
+            </div>
+
+            <div class="course-summary-card">
+              <h3>Explore another path</h3>
+              <p>Choose a different beginner learning path.</p>
+              <a class="text-link" href="academy.html">Browse academy →</a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="alert alert-info" data-course-message role="status" aria-live="polite" hidden></div>
+
+        <footer class="dashboard-footer">
+          <span>© <span data-current-year></span> TechVision</span>
+          <span>Demo curriculum · Local progress</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <script type="module" src="../js/app.js"></script>
+</body>
+</html>
